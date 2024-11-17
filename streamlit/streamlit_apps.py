@@ -82,8 +82,8 @@ if st.button("Prediksi Transaksi"):
     # Menampilkan hasil prediksi
     st.markdown("### Hasil Prediksi")
     if prediction[0] > 0.5:
-        st.error(f"Transaksi terdeteksi mencurigakan dengan probabilitas: {prediction[0]:.2f}")
+        st.error(f"Transaksi terdeteksi **mencurigakan** dengan probabilitas: {prediction[0]:.2f}")
     else:
-        st.success(f"Transaksi terdeteksi aman dengan probabilitas: {1 - prediction[0]:.2f}")
+        st.success(f"Transaksi terdeteksi **aman** dengan probabilitas: {1 - prediction[0]:.2f}")
 else:
     st.info("Masukkan data transaksi dan tekan tombol 'Prediksi Transaksi'.")
