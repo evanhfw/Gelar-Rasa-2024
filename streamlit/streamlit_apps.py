@@ -15,11 +15,11 @@ X_train = joblib.load('Classification/X_train.pkl')
 def get_input():
     st.subheader("Input Data Transaksi")
     amt = st.number_input(
-        'Masukkan Jumlah Transaksi (Rp)',
+        'Masukkan Jumlah Transaksi (USD)',
         min_value=0.0,
         value=0.0,
         step=0.01,
-        help="Jumlah total transaksi dalam rupiah."
+        help="Jumlah total transaksi dalam mata uang USD."
     )
     job = st.selectbox(
         'Pilih Jenis Pekerjaan',
