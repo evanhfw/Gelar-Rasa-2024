@@ -4,12 +4,16 @@ import pandas as pd
 import joblib
 import numpy as np
 
-# Load model dan kategori yang digunakan pada data pelatihan
-model = xgb.Booster(model_file='fraud_detection.json')
-category_categories = list(set(joblib.load('category.joblib')))  # Pastikan unik
-city_categories = list(set(joblib.load('city.joblib')))          # Pastikan unik
-job_categories = list(set(joblib.load('job.joblib')))            # Pastikan unik
-X_train = joblib.load('X_train.pkl')
+# # Load model dan kategori yang digunakan pada data pelatihan
+# model = xgb.Booster(model_file='fraud_detection.json')
+# category_categories = list(set(joblib.load('category.joblib')))  # Pastikan unik
+# city_categories = list(set(joblib.load('city.joblib')))          # Pastikan unik
+# job_categories = list(set(joblib.load('job.joblib')))            # Pastikan unik
+# X_train = joblib.load('X_train.pkl')
+
+import os
+st.write("Current Working Directory:", os.getcwd())
+st.write("Available Files:", os.listdir('.'))
 
 def get_input():
     amt = st.number_input('Jumlah Transaksi', min_value=0.0, value=0.0)
